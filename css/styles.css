@@ -1,0 +1,514 @@
+/*
+
+Color Palette:
+
+Light green:    #4abdac
+Orange:         #fc4a1a
+Yellow:         #f7b733
+Light Grey:     #dfdce3
+
+Fonts:
+
+Bold title: font-family: 'Bungee Shade', cursive;
+
+Regular Title: font-family: 'Gravitas One', cursive;
+
+Sub Title: font-family: 'Rubik', sans-serif;
+
+Body Text: font-family: 'Roboto', sans-serif;
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: url("../img/background.png") top left repeat;
+}
+
+.navOpen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 2em;
+    font-size: 2em;
+    padding: .5em;
+    color: #fc4a1a;
+}
+
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fc4a1a;
+    font-family: 'Rubik', sans-serif;
+}
+
+.sideNav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin: .5em;
+    color: #f7b733;
+}
+
+.closebtn {
+    align-self: flex-end;
+}
+
+.closebtn i {
+    font-size: 1.5em;
+    color: #fc4a1a;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/torontoMobile-min.jpg') left center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.headerInfo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, #4abdac, #4abdac10);
+}
+
+.headerInfo h1 {
+    align-self: center;
+}
+
+.headerGroup {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerGroup ul {
+    width: 100%;
+    height: 8em;
+    list-style: none;
+    font-size: .5em;
+    margin: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerGroup li {
+    margin: .5em;
+    color: #f7b733;
+    font-size: 4em;
+}
+
+.headerGroup li:nth-child(odd) {
+    color: #fc4a1a;
+}
+
+.headerGroup a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.arrow {
+    font-size: 5em;
+    color: #f7b733;
+}
+
+.headImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1em;
+}
+
+h1 {
+    color: #dfdce3;
+    font-family: 'Bungee Shade', cursive;
+    align-self: flex-start;
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.25em;
+    margin: .5em;
+    color: #fc4a1a;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    color: #dfdce3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.portfolio,
+.bio,
+.contact,
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .5em;
+}
+
+.portImg {
+    width: 95%;
+    margin: .5em 0em;
+    text-decoration: none;
+    border-bottom: 2px solid #f7b733;
+}
+
+.portImg img {
+    width: 100%;
+}
+
+.bio h1 {
+    color: #fc4a1a;
+}
+
+.contact h1 {
+    align-self: flex-start;
+    color: #f7b733;
+}
+
+#button {
+    width: 60%;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fc4a1a;
+    color: #dfdce3;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+    font-size: 1.5em;
+    width: 100%;
+    margin: 10px auto;
+    color: #dfdce3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.copyright {
+    font-size: .75em;
+    padding: 5px;
+}
+
+/* Slideshow container */
+
+#testimonial {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.slideshow-container {
+    position: relative;
+    background: #f1f1f190;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+/* Slides */
+
+.mySlides {
+    display: none;
+    padding: 5em;
+    text-align: center;
+    width: 100%;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    margin: 0 auto;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0px 5px 5px 0px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: #4abdac;
+    color: #fc4a1a;
+}
+
+/* The dot/bullet/indicator container */
+
+.dot-container {
+    text-align: center;
+    padding: 5px;
+    width: 20%;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: .5em;
+    width: .5em;
+    margin: 0 2px;
+    background-color: #f7b733;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+
+.active,
+.dot:hover {
+    background-color: #fc4a1a;
+}
+
+/* Add an italic font style to all quotes */
+
+q {
+    font-style: italic;
+}
+
+/* Add a blue color to the author */
+
+.author {
+    color: cornflowerblue;
+}
+
+/* Tablet Styles */
+
+@media (min-width: 768px) {
+
+    header {
+        background-image: url('../img/torontoFinal.jpg');
+        background-size: cover;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .headerInfo {
+        justify-content: flex-end;
+        background: linear-gradient(to top, #4abdac, #4abdac20);
+    }
+
+    .headerImg {
+        margin-top: 10em;
+    }
+
+    .headerInfo h1 {
+        align-self: center;
+    }
+
+    .headerGroup {
+        height: 80%;
+    }
+
+    .headerGroup i {
+        font-size: 10em;
+    }
+
+    .headImg {
+        width: 250px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.25em;
+    }
+
+    p {
+        color: #dfdce3;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .headerGroup ul {
+        width: 100%;
+        height: 15em;
+        font-size: .5em;
+        margin: 1em;
+        justify-content: space-around;
+    }
+
+    .headerGroup li {
+        font-size: 1em;
+    }
+
+    .portfolio {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: .5em;
+    }
+
+    .portfolio h1 {
+        width: 100%;
+    }
+
+    .portImg {
+        width: 48%;
+        margin: .5em 0em;
+        text-decoration: none;
+        border-bottom: 2px solid #f7b733;
+    }
+
+    .portImg p {
+        height: 8em;
+        margin: 1em 0em;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    header {
+        align-items: center;
+    }
+
+    .headerInfo {
+        align-items: center;
+    }
+
+    .headerGroup {
+        width: 60%;
+        height: 100%;
+    }
+
+    .headerGroup ul {
+        width: 100%;
+        height: 10em;
+        font-size: .25em;
+        margin: .5em;
+        justify-content: space-around;
+    }
+
+    .headerGroup li {
+        font-size: 1em;
+    }
+
+    .headerInfo h1 {
+        align-self: center;
+    }
+
+    .headerGroup {
+        height: 80%;
+    }
+
+    .headerGroup i {
+        font-size: 10em;
+    }
+
+    .headImg {
+        width: 200px;
+        height: 200px;
+    }
+
+    main {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .portImg {
+        width: 32%;
+    }
+
+    .bio {
+        width: 32%;
+        float: left;
+    }
+
+    .container {
+        width: 32%;
+        float: left;
+    }
+
+    .contact {
+        width: 32%;
+        float: right;
+    }
+
+    .slideshow-container {
+        height: 160px;
+    }
+
+    .prev,
+    .next {
+        top: 30%;
+    }
+}
