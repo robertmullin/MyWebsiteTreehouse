@@ -89,7 +89,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: linear-gradient(to top, #4abdac, #4abdac10);
+    background: linear-gradient(to top, rgba(74, 189, 172, 1), rgba(74, 189, 172, 0.3));
 }
 
 .headerInfo h1 {
